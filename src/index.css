@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+
+  --color-brand-950: #070F1A;
+  --color-brand-900: #0B192C;
+  --color-brand-850: #0E2038;
+  --color-brand-800: #132A4A;
+  --color-brand-700: #1B3B68;
+  --color-brand-600: #25518E;
+  --color-brand-500: #326BB8;
+
+  --color-ice-400: #7BA5D6;
+  --color-ice-300: #A2C2E8;
+  --color-ice-200: #C9DEF5;
+  --color-ice-100: #E5EFFB;
+  --color-ice-50: #F3F7FC;
+
+  --color-canvas: #F8FAFC;
+  --color-card: #FFFFFF;
+
+  --color-amber-600: #B45309;
+  --color-amber-500: #D97706;
+  --color-amber-400: #F59E0B;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: #1A2533;
+    background-color: #F8FAFC;
+  }
+}
+
+/* Custom Glass & Depth Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-dark {
+  background: rgba(11, 25, 44, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glow-brand {
+  box-shadow: 0 20px 40px -15px rgba(19, 42, 74, 0.12);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

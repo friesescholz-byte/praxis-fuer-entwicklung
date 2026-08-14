@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Verkaufs- & Conversion-Analyse | Praxis für Entwicklung (Scholz & Friese)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 18mm 16mm 18mm 16mm;
+    }
+    * {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #1E293B;
+      background-color: #FFFFFF;
+      line-height: 1.55;
+      font-size: 11.5pt;
+      margin: 0;
+      padding: 0;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Outfit', sans-serif;
+      color: #0B192C;
+      margin-top: 0;
+    }
+    
+    /* Header Brand Bar */
+    .agency-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #E2E8F0;
+      margin-bottom: 24px;
+    }
+    .agency-brand {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #1B3B68;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+    .project-tag {
+      background: #E5EFFB;
+      color: #0B192C;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 9pt;
+      font-weight: 700;
+      border: 1px solid #C9DEF5;
+    }
+
+    .doc-title-container {
+      margin-bottom: 24px;
+    }
+    .doc-badge {
+      display: inline-block;
+      background: #EBF3EE;
+      color: #1A382B;
+      font-size: 9pt;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      border: 1px solid #CFDDD4;
+    }
+    h1 {
+      font-size: 22pt;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 6px;
+      color: #0B192C;
+    }
+    .doc-subtitle {
+      font-size: 12pt;
+      color: #475569;
+      font-weight: 500;
+    }
+
+    /* Section Cards */
+    .section-title {
+      font-size: 14pt;
+      font-weight: 700;
+      color: #0B192C;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 1.5px solid #E2E8F0;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 18px;
+      font-size: 9.5pt;
+      background: #FFFFFF;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #E2E8F0;
+    }
+    th {
+      background-color: #0B192C;
+      color: #FFFFFF;
+      text-align: left;
+      padding: 9px 12px;
+      font-weight: 700;
+      font-size: 9pt;
+      letter-spacing: 0.5px;
+    }
+    td {
+      padding: 9px 12px;
+      border-bottom: 1px solid #E2E8F0;
+      vertical-align: top;
+      line-height: 1.45;
+    }
+    tr:nth-child(even) td {
+      background-color: #F8FAFC;
+    }
+
+    /* Highlight Boxes */
+    .box-quote {
+      background: #F8FAFC;
+      border-left: 4px solid #1A382B;
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 14px 0;
+      font-size: 10.5pt;
+      color: #0B192C;
+    }
+    .box-quote strong {
+      color: #1A382B;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .card {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      padding: 12px 14px;
+      border-radius: 8px;
+    }
+    .card h4 {
+      margin: 0 0 4px 0;
+      font-size: 10.5pt;
+      color: #0B192C;
+    }
+    .card p {
+      margin: 0;
+      font-size: 9pt;
+      color: #475569;
+    }
+
+    .page-break {
+      page-break-before: always;
+      break-before: page;
+    }
+    .no-break {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .footer-bar {
+      margin-top: 30px;
+      padding-top: 10px;
+      border-top: 1px solid #E2E8F0;
+      display: flex;
+      justify-content: space-between;
+      font-size: 8pt;
+      color: #94A3B8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="agency-header">
+    <div class="agency-brand">Scholz & Friese • Webdesign Agentur</div>
+    <div class="project-tag">Projekt: Praxis für Entwicklung</div>
+  </div>
+
+  <div class="doc-title-container">
+    <div class="doc-badge">STRATEGISCHES VERKAUFS- & CONVERSION-KONZEPT</div>
+    <h1>Verkaufs- & Zielgruppenanalyse</h1>
+    <div class="doc-subtitle">Positionierung, psychologische Problem-Lösungs-Architektur & Trust-Systematik (0–18 Jahre)</div>
+  </div>
+
+  <!-- 1. Executive Summary -->
+  <div class="section-title">1. Executive Summary & Positionierung</div>
+  <table>
+    <tr>
+      <th style="width: 25%;">Dimension</th>
+      <th>Strategische Ausrichtung</th>
+    </tr>
+    <tr>
+      <td><strong>Unternehmen</strong></td>
+      <td><strong>Praxis für Entwicklung – Kathrin Raddatz</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Fachrichtung</strong></td>
+      <td>Ganzheitliche Entwicklungs- & Lerntherapie nach <strong>PäPKi®</strong> (nach Prof. Dr. phil. Wibke Bein-Wierzbinski)</td>
+    </tr>
+    <tr>
+      <td><strong>Ziel-Altersgruppe</strong></td>
+      <td><strong>0 bis 18 Jahre</strong> (Säuglinge, Kleinkinder, Vorschule, Schulkinder, Jugendliche / Teenager)</td>
+    </tr>
+    <tr>
+      <td><strong>Kernversprechen</strong></td>
+      <td><em>„Die Ursache an der Wurzel packen – statt nur Symptome zu behandeln.“</em> Reifung des Nervensystems und der neuromotorischen Aufrichtung für spürbare Leichtigkeit beim Lernen, Bewegen und im Alltag.</td>
+    </tr>
+    <tr>
+      <td><strong>Website-Mission</strong></td>
+      <td>Druck und Schuldgefühle von Eltern nehmen, Aha-Effekt erzeugen (Körper-Gehirn-Verbindung), Vertrauen stiften und qualifizierte Ersttermine generieren.</td>
+    </tr>
+  </table>
+
+  <!-- 2. Problem-Solution Matrix -->
+  <div class="section-title">2. Tiefenpsychologische Problem-Lösungs-Matrix (0 bis 18 Jahre)</div>
+  <p style="font-size: 9.5pt; color: #475569; margin-bottom: 10px;">
+    Weil das Angebot die gesamte Entwicklungsspanne von 0 bis 18 Jahren abdeckt, differenziert die Website präzise nach den Lebensphasen und den spezifischen Sorgen der Eltern:
+  </p>
+
+  <table class="no-break">
+    <tr>
+      <th style="width: 22%;">Altersstufe</th>
+      <th style="width: 38%;">Reale Problemstellung & Sorgen</th>
+      <th style="width: 40%;">PäPKi® Lösung & Therapeutischer Nutzen</th>
+    </tr>
+    <tr>
+      <td><strong>Säuglinge<br>(0–12 Monate)</strong></td>
+      <td>
+        • Starkes Weinen, Unruhe, Schlafprobleme<br>
+        • Baby überstreckt sich (C-Haltung), liegt asymmetrisch<br>
+        • Abneigung gegen Bauchlage, Kopfheben fällt schwer<br>
+        • Eltern fühlen sich überfordert und verunsichert
+      </td>
+      <td>
+        <strong>Frühkindliche Aufrichtungs-Diagnostik:</strong><br>
+        Sanfte Überprüfung der Haltungsreflexe. Baby findet in die Entspannung; Eltern erhalten sichere Handgriffe und alltagstaugliche Lagerungstechniken.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Kleinkinder<br>(1–3 Jahre)</strong></td>
+      <td>
+        • Krabbelphase übersprungen (direkt gelaufen)<br>
+        • Stolpert oft, Gangunsicherheit, Zehenspitzengang<br>
+        • Kinderärzte vertrösten: <em>„Wächst sich aus“</em>, aber Eltern spüren Entwicklungsverzögerungen
+      </td>
+      <td>
+        <strong>Bewegungsbausteine gezielt nachholen:</strong><br>
+        Spielerische Bodenübungen vernetzen Muskelketten und Gleichgewichtssinn neu. Beugt späteren Haltungsschäden und Schulproblemen nachhaltig vor.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Vorschule<br>(3–6 Jahre)</strong></td>
+      <td>
+        • Stift wird verkrampft gehalten, Frust beim Malen<br>
+        • Kann nicht 5 Minuten stillsitzen, Wutanfälle<br>
+        • Grobmotorische Defizite (Fahrrad/Laufrad schwer)<br>
+        • Sorge vor der anstehenden Einschulung
+      </td>
+      <td>
+        <strong>Vorbereitung auf die Schulreife:</strong><br>
+        Integration frühkindlicher Restreflexe, Stärkung von Rumpfstabilität und Auge-Hand-Koordination. Kind geht mit Selbstvertrauen in die Schule.
+      </td>
+    </tr>
+  </table>
+
+  <div class="page-break"></div>
+
+  <table class="no-break">
+    <tr>
+      <th style="width: 22%;">Altersstufe</th>
+      <th style="width: 38%;">Reale Problemstellung & Sorgen</th>
+      <th style="width: 40%;">PäPKi® Lösung & Therapeutischer Nutzen</th>
+    </tr>
+    <tr>
+      <td><strong>Schulkinder<br>(6–12 Jahre)</strong></td>
+      <td>
+        • Täglicher Kampf und Tränen bei den Hausaufgaben<br>
+        • Konzentrationsprobleme, LRS / Dyskalkulie-Verdacht<br>
+        • Rutscht unruhig auf dem Stuhl, stützt den Kopf ab<br>
+        • Kind fühlt sich „dumm“ und verliert die Freude
+      </td>
+      <td>
+        <strong>Ursachentherapie statt Nachhilfe-Marathon:</strong><br>
+        Aufdecken von Aufrichtungsdefiziten (Körperkompensation raubt Energie). 10–15 Min. tägliche Bodenübungen schenken Konzentration und Hausaufgabenfrieden zurück.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Jugendliche<br>(12–18 Jahre)</strong></td>
+      <td>
+        • Chronische Fehlhaltungen (Rundrücken, Verspannungen)<br>
+        • Leistungsabfall, Prüfungsblockaden, Blackouts<br>
+        • Schnelle Reizüberflutung, Stress, Erschöpfung<br>
+        • Hoher mentaler Druck in weiterführender Schule
+      </td>
+      <td>
+        <strong>Neuromotorische Stabilisierung:</strong><br>
+        Gezielte Festigung tiefer Stützmuskulatur. Entlastung des Nervensystems; alltagstaugliche Übungen, die Jugendliche selbstständig umsetzen können.
+      </td>
+    </tr>
+  </table>
+
+  <!-- 3. Trust Systematik -->
+  <div class="section-title">3. Systematischer Trust- & Vertrauens-Aufbau</div>
+
+  <div class="grid-2 no-break">
+    <div class="card">
+      <h4>1. Wissenschaftliche Fundierung</h4>
+      <p>PäPKi® nach Prof. Dr. phil. Wibke Bein-Wierzbinski. Keine Heilsversprechen, sondern reproduzierbare Entwicklungsphysiologie.</p>
+    </div>
+    <div class="card">
+      <h4>2. Entpathologisierung & Schuldabbau</h4>
+      <p>Kein Kind ist absichtlich faul. Wenn der Körper mit Aufrichtung ringt, fehlt Energie für den Kopf. Das nimmt Eltern den Druck.</p>
+    </div>
+    <div class="card">
+      <h4>3. Schutz- & Wohlfühlraum</h4>
+      <p>Praxis ohne Kittel und ohne Leistungsdruck. Herzlicher Empfang, Empathie und individuelle Begleitung auf Augenhöhe.</p>
+    </div>
+    <div class="card">
+      <h4>4. Alltagstaugliches Heimtraining</h4>
+      <p>Nur 10–15 Minuten täglich zu Hause. Kein endloser Terminstress, sondern gezielte Anleitung und Überprüfung alle 4–6 Wochen.</p>
+    </div>
+  </div>
+
+  <div class="box-quote no-break">
+    <strong>Leitsatz der Kommunikation:</strong> <em>„Wenn der Körper in Balance findet, kann Lernen gelingen. Wir stärken das Fundament – für Babys, Kinder und Jugendliche von 0 bis 18 Jahren.“</em>
+  </div>
+
+  <!-- 4. Conversion-Hebel -->
+  <div class="section-title">4. Conversion-Architektur der Website</div>
+  <table class="no-break">
+    <tr>
+      <th style="width: 30%;">Website-Element</th>
+      <th>Wirkung & Conversion-Hebel</th>
+    </tr>
+    <tr>
+      <td><strong>Hero-Section mit Slideshow</strong></td>
+      <td>Authentische Einblicke aus der echten Praxis (Kathrin mit Kindern, Praxisräume, Motivationskarten). Baut sofort Wärme und Vertrauen auf.</td>
+    </tr>
+    <tr>
+      <td><strong>Alters-Kompass (5 Tabs)</strong></td>
+      <td>Direkte Identifikation für Eltern jedes Altersbereichs (0–18 J.) mit spezifischen Symptomkarten und direktem Termin-Button.</td>
+    </tr>
+    <tr>
+      <td><strong>Praxis-Video & Ambiente</strong></td>
+      <td>Nimmt Kindern und Eltern jede Schwellenangst durch echte Stimmen und einladende Praxisräume.</td>
+    </tr>
+    <tr>
+      <td><strong>4-Schritte-Ablauf</strong></td>
+      <td>Schafft Planungssicherheit und Transparenz (Erstanamnese → Diagnostik → 10-Minuten-Übungsplan → Verlaufskontrolle alle 4–6 Wochen).</td>
+    </tr>
+    <tr>
+      <td><strong>Smarte Kontaktführung</strong></td>
+      <td>Direktauswahl der Altersstufe im Formular, WhatsApp-Direktkontakt, Telefonische Sprechzeiten und Google-Maps-Routenplaner.</td>
+    </tr>
+  </table>
+
+  <!-- Footer -->
+  <div class="footer-bar">
+    <div>Agentur Scholz & Friese • UI/UX Pro Max Standard</div>
+    <div>Praxis für Entwicklung – Kathrin Raddatz (Nienburg Weser)</div>
+  </div>
+
+</body>
+</html>
