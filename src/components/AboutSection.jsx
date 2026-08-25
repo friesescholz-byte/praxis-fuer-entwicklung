@@ -54,17 +54,6 @@ export default function AboutSection() {
                 </p>
               </div>
             </div>
-
-            {/* Floating Badge (Positioned at Top Right, leaving bottom text 100% free) */}
-            <div className="absolute -top-5 -right-3 sm:-top-6 sm:-right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-[#CBD5E1] flex items-center gap-3 z-20">
-              <div className="w-10 h-10 rounded-xl bg-[#EBF3EE] border border-[#CFDDD4] flex items-center justify-center text-[#1A382B]">
-                <Award className="w-5 h-5 text-[#1A382B]" />
-              </div>
-              <div>
-                <p className="text-[10px] font-bold text-[#1A382B] uppercase tracking-wider">Fundierte Ausbildung</p>
-                <p className="font-display font-bold text-xs text-[#0B192C]">PäPKi® nach Prof. Bein-Wierzbinski</p>
-              </div>
-            </div>
           </div>
 
           {/* Right Column: Empathy & Philosophy Copy */}

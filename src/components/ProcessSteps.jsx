@@ -4,36 +4,28 @@ import { MessageSquare, Search, Sparkles, RefreshCw, ArrowRight, CheckCircle2 } 
 export default function ProcessSteps() {
   const steps = [
     {
-      num: '01',
       title: 'Ausführliche Erstanamnese',
       subtitle: 'Wir hören Ihnen zu',
       desc: 'In einem ruhigen, vertraulichen Erstgespräch beleuchten wir die bisherige Entwicklung Ihres Kindes von der Schwangerschaft und Geburt bis zum heutigen Tag.',
-      icon: MessageSquare,
-      highlight: 'Kein Zeitdruck'
+      icon: MessageSquare
     },
     {
-      num: '02',
       title: 'PäPKi® Diagnostik & Reflex-Check',
       subtitle: 'Die Ursachen aufspüren',
       desc: 'Wir untersuchen spielerisch die neuromotorischen Aufrichtungsmuster, Haltungsreaktionen und frühkindlichen Reflexe, um die genauen Blockaden zu identifizieren.',
-      icon: Search,
-      highlight: 'Sanft & angstfrei'
+      icon: Search
     },
     {
-      num: '03',
       title: 'Individueller Übungsplan für zu Hause',
       subtitle: '10–15 Minuten täglich',
       desc: 'Sie erhalten gezielte gymnastische Bodenübungen für zu Hause. Wir üben jeden Handgriff gemeinsam in der Praxis ein, damit Sie volle Sicherheit haben.',
-      icon: Sparkles,
-      highlight: 'Alltagstauglich'
+      icon: Sparkles
     },
     {
-      num: '04',
       title: 'Begleitende Verlaufskontrollen',
       subtitle: 'Fortschritte sichern',
       desc: 'Alle 4 bis 6 Wochen überprüfen wir die Veränderungen und passen die Übungen an die neu gewonnene neuromotorische Reife Ihres Kindes an.',
-      icon: RefreshCw,
-      highlight: 'Alle 4–6 Wochen'
+      icon: RefreshCw
     }
   ];
 
@@ -78,46 +70,38 @@ export default function ProcessSteps() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
-          {steps.map((step, idx) => {
-            const Icon = step.icon;
-            return (
-              <div
-                key={idx}
-                className="bg-white rounded-3xl p-7 border border-[#E2E8F0] shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 relative flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="font-display font-extrabold text-3xl text-[#25518E]">
-                      {step.num}
-                    </span>
-                    <span className="px-2.5 py-1 rounded-full bg-[#E5EFFB] border border-[#C9DEF5] text-[11px] font-bold text-[#0B192C]">
-                      {step.highlight}
-                    </span>
+            {steps.map((step, idx) => {
+              const Icon = step.icon;
+              return (
+                <div
+                  key={idx}
+                  className="group bg-white rounded-3xl p-7 border border-[#CBD5E1] shadow-sm hover:shadow-xl hover:border-[#1A382B]/40 hover:-translate-y-1.5 transition-all duration-300 relative flex flex-col justify-between"
+                >
+                  <div>
+                    {/* Animated Icon Container with Mouseover Animation */}
+                    <div className="w-14 h-14 rounded-2xl bg-[#E5EFFB] border border-[#C9DEF5] flex items-center justify-center text-[#1B3B68] mb-5 shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-[#1A382B] group-hover:text-white group-hover:shadow-md group-hover:rotate-3">
+                      <Icon className="w-7 h-7 transition-transform duration-300 group-hover:scale-110" />
+                    </div>
+
+                    <p className="text-xs font-bold text-[#25518E] uppercase tracking-wider mb-1.5">
+                      {step.subtitle}
+                    </p>
+
+                    <h3 className="font-display font-bold text-lg text-[#0B192C] mb-3 leading-snug">
+                      {step.title}
+                    </h3>
+
+                    <p className="text-xs sm:text-sm text-[#1E293B]/75 leading-relaxed font-normal">
+                      {step.desc}
+                    </p>
                   </div>
 
-                  <div className="w-12 h-12 rounded-2xl bg-[#E5EFFB] flex items-center justify-center text-[#1B3B68] mb-4">
-                    <Icon className="w-6 h-6 text-[#1B3B68]" />
+                  <div className="pt-5 mt-6 border-t border-[#E2E8F0] flex items-center gap-1.5 text-xs font-bold text-[#1A382B]">
+                    <span>Schritt {idx + 1} von 4</span>
                   </div>
-
-                  <p className="text-xs font-bold text-[#25518E] uppercase tracking-wider mb-1">
-                    {step.subtitle}
-                  </p>
-
-                  <h3 className="font-display font-bold text-lg text-[#0B192C] mb-3">
-                    {step.title}
-                  </h3>
-
-                  <p className="text-xs sm:text-sm text-[#1E293B]/70 leading-relaxed">
-                    {step.desc}
-                  </p>
                 </div>
-
-                <div className="pt-6 mt-6 border-t border-[#E2E8F0] flex items-center gap-1.5 text-xs font-semibold text-[#0B192C]">
-                  <span>Schritt {idx + 1} von 4</span>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
           </div>
         </div>
 
@@ -133,7 +117,7 @@ export default function ProcessSteps() {
           </div>
           <a
             href="#kontakt"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-[#1A382B] hover:bg-[#264E3D] text-white font-bold text-sm transition-all duration-300 shrink-0 shadow-lg shadow-[#1A382B]/20"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-[#1A382B] hover:bg-[#264E3D] text-white font-bold text-sm transition-all duration-300 shrink-0 shadow-lg shadow-[#1A382B]/20 cursor-pointer"
           >
             <span>Jetzt unverbindlich anfragen</span>
             <ArrowRight className="w-4 h-4" />

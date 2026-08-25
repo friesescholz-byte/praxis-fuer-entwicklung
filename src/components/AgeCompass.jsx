@@ -95,12 +95,9 @@ export default function AgeCompass({ onSelectAge }) {
             {/* Left Sub-Column: Symptoms / Problems */}
             <div className="lg:col-span-7 space-y-6">
               
-              <div className="flex flex-wrap items-center gap-2">
+              <div className="flex items-center gap-2">
                 <span className="px-3.5 py-1 rounded-full bg-[#E5EFFB] text-[#1B3B68] text-xs font-bold border border-[#C9DEF5]">
                   {currentGroup.badge}
-                </span>
-                <span className="text-xs font-bold text-[#25518E]">
-                  Altersbereich: {currentGroup.tabLabel}
                 </span>
               </div>
 

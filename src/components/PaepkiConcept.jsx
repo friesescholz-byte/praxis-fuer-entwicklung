@@ -151,7 +151,7 @@ export default function PaepkiConcept() {
 
           </div>
 
-          {/* Right Column: Visual Stage with Genuine Photo */}
+          {/* Right Column: Visual Stage with Genuine Photo (Clean, Unobstructed) */}
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
               <img
@@ -159,20 +159,6 @@ export default function PaepkiConcept() {
                 alt="Kind bei der gelösten und fokussierten PäPKi Förderung"
                 className="w-full h-[480px] object-cover object-center"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C]/85 via-transparent to-transparent" />
-              
-              <div className="absolute bottom-6 left-6 right-6 text-white space-y-2">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-semibold border border-white/20">
-                  <ShieldCheck className="w-4 h-4 text-white" />
-                  <span>Ursachenorientiert statt symptomatisch</span>
-                </div>
-                <h4 className="font-display font-bold text-xl text-white">
-                  Vom Stress zur Gelassenheit im Schul- & Familienalltag
-                </h4>
-                <p className="text-xs text-white/85">
-                  „Jedes Kind ist einzigartig – zusammen finden wir den passenden Weg.“
-                </p>
-              </div>
             </div>
           </div>
 

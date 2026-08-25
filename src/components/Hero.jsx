@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, ArrowRight, Compass, ChevronLeft, ChevronRight, Heart } from 'lucide-react';
+import { ArrowRight, Compass, ChevronLeft, ChevronRight } from 'lucide-react';
 import { MEDIA } from '../constants/media';
 
 const ease = [0.22, 1, 0.36, 1];
@@ -8,38 +8,31 @@ const ease = [0.22, 1, 0.36, 1];
 const SLIDES = [
   {
     image: MEDIA.kathrinWithChild7,
-    title: 'Individuelle Begleitung auf Augenhöhe',
-    subtitle: 'Kathrin Raddatz mit Kind in der Praxis für Entwicklung'
+    title: 'Individuelle Begleitung auf Augenhöhe'
   },
   {
     image: MEDIA.babyBoyPraxis,
-    title: 'Frühkindliche Aufrichtung & Diagnostik',
-    subtitle: 'Sanfte Meilenstein-Förderung für Babys & Kleinkinder'
+    title: 'Frühkindliche Aufrichtung & Diagnostik'
   },
   {
     image: MEDIA.childWriting6,
-    title: 'Feinmotorik & Schulvorbereitung',
-    subtitle: 'Entspannte Stifthaltung und Freude am Gestalten'
+    title: 'Feinmotorik & Schulvorbereitung'
   },
   {
     image: MEDIA.childWriting10,
-    title: 'Lern- & Konzentrationsstärkung',
-    subtitle: 'Den täglichen Hausaufgabenstress nachhaltig lösen'
+    title: 'Lern- & Konzentrationsstärkung'
   },
   {
     image: MEDIA.kathrinRaddatz,
-    title: 'Kathrin Raddatz • Praxisinhaberin',
-    subtitle: 'Zertifizierte PäPKi® Entwicklungs- & Lerntherapie'
+    title: 'Kathrin Raddatz • Praxisinhaberin'
   },
   {
     image: MEDIA.practiceEntrance,
-    title: 'Praxisräume zum Wohlfühlen',
-    subtitle: 'Nordertorstriftweg 11, 31582 Nienburg (Weser)'
+    title: 'Praxisräume zum Wohlfühlen'
   },
   {
     image: MEDIA.motivationCards,
-    title: 'Motivationskärtchen für zu Hause',
-    subtitle: 'Spielerische Unterstützung für das 10-Minuten-Bodenprogramm'
+    title: 'Motivationskärtchen für zu Hause'
   }
 ];
 
@@ -156,17 +149,6 @@ export default function Hero() {
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
-            {/* Top Right Floating Badge (Positioned gracefully on the outer edge) */}
-            <div className="absolute -top-4 -right-3 sm:-top-5 sm:-right-5 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-xl border border-[#CBD5E1] flex items-center gap-2.5 z-30">
-              <div className="w-8 h-8 rounded-xl bg-[#EBF3EE] border border-[#CFDDD4] flex items-center justify-center text-[#1A382B]">
-                <ShieldCheck className="w-4 h-4 text-[#1A382B]" />
-              </div>
-              <div className="text-left">
-                <p className="text-[10px] text-[#1A382B] font-bold uppercase tracking-wider">Zertifiziert</p>
-                <p className="font-display font-bold text-xs text-[#0B192C]">PäPKi® Konzept</p>
-              </div>
-            </div>
-
             {/* Main Visual Card Container */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-[#0B192C] group h-[460px] sm:h-[520px]">
               
@@ -186,58 +168,42 @@ export default function Hero() {
                       className="w-full h-full object-cover object-center"
                       loading={index === 0 ? 'eager' : 'lazy'}
                     />
-                    {/* Subtle Dark Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C]/90 via-[#0B192C]/25 to-transparent" />
                   </div>
                 );
               })}
-              {/* Bottom Info Bar inside Photo */}
-              <div className="absolute bottom-4 left-4 right-4 z-20 space-y-2 text-white">
-                <div className="bg-[#0B192C]/90 backdrop-blur-md p-4 rounded-2xl border border-white/10 shadow-lg">
-                  <div className="flex items-center gap-2 text-xs font-semibold text-[#A2C2E8] uppercase tracking-wider mb-1">
-                    <Heart className="w-3.5 h-3.5 text-[#A2C2E8]" />
-                    <span>Praxis für Entwicklung • Nienburg</span>
-                  </div>
-                  <h4 className="font-display font-bold text-base sm:text-lg text-white leading-tight">
-                    {SLIDES[currentSlide].title}
-                  </h4>
-                  <p className="text-xs text-white/80 mt-0.5">
-                    {SLIDES[currentSlide].subtitle}
-                  </p>
+
+              {/* Bottom Subtle Navigation Bar for Slide Dots & Controls */}
+              <div className="absolute bottom-4 left-4 right-4 z-20 flex items-center justify-between bg-[#0B192C]/60 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-white/10 shadow-lg">
+                {/* Progress / Slide Indicators */}
+                <div className="flex items-center gap-1.5">
+                  {SLIDES.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setCurrentSlide(idx)}
+                      className={`h-1.5 rounded-full transition-all duration-500 cursor-pointer ${
+                        idx === currentSlide ? 'w-6 bg-white' : 'w-2 bg-white/40 hover:bg-white/70'
+                      }`}
+                      aria-label={`Slide ${idx + 1}`}
+                    />
+                  ))}
                 </div>
 
-                {/* Progress / Slide Indicators */}
-                <div className="flex items-center justify-between pt-1">
-                  <div className="flex gap-1.5">
-                    {SLIDES.map((_, idx) => (
-                      <button
-                        key={idx}
-                        onClick={() => setCurrentSlide(idx)}
-                        className={`h-1.5 rounded-full transition-all duration-500 ${
-                          idx === currentSlide ? 'w-6 bg-white' : 'w-2 bg-white/40 hover:bg-white/70'
-                        }`}
-                        aria-label={`Slide ${idx + 1}`}
-                      />
-                    ))}
-                  </div>
-
-                  {/* Manual Arrow Controls */}
-                  <div className="flex items-center gap-1.5">
-                    <button
-                      onClick={prevSlide}
-                      className="w-7 h-7 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white flex items-center justify-center transition-colors"
-                      aria-label="Vorheriges Bild"
-                    >
-                      <ChevronLeft className="w-4 h-4" />
-                    </button>
-                    <button
-                      onClick={nextSlide}
-                      className="w-7 h-7 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white flex items-center justify-center transition-colors"
-                      aria-label="Nächstes Bild"
-                    >
-                      <ChevronRight className="w-4 h-4" />
-                    </button>
-                  </div>
+                {/* Manual Arrow Controls */}
+                <div className="flex items-center gap-1.5">
+                  <button
+                    onClick={prevSlide}
+                    className="w-7 h-7 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white flex items-center justify-center transition-colors cursor-pointer"
+                    aria-label="Vorheriges Bild"
+                  >
+                    <ChevronLeft className="w-4 h-4" />
+                  </button>
+                  <button
+                    onClick={nextSlide}
+                    className="w-7 h-7 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white flex items-center justify-center transition-colors cursor-pointer"
+                    aria-label="Nächstes Bild"
+                  >
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
                 </div>
               </div>
 
