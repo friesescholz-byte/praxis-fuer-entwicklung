@@ -155,8 +155,8 @@ export default function PaepkiConcept() {
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
               <img
-                src={MEDIA.childWriting6}
-                alt="Kind bei der gelösten und fokussierten PäPKi Förderung"
+                src={MEDIA.kathrinHoldingGirlMat}
+                alt="Kathrin Raddatz bei der gezielten PäPKi® neuromotorischen Entwicklungsbegleitung"
                 className="w-full h-[480px] object-cover object-center"
               />
             </div>

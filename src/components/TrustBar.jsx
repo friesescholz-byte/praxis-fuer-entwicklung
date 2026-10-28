@@ -6,22 +6,22 @@ export default function TrustBar() {
     {
       icon: Award,
       title: 'PäPKi® Zertifiziert',
-      desc: 'Wissenschaftlich fundiert nach Prof. Dr. phil. Wibke Bein-Wierzbinski'
+      desc: 'Wissenschaftlich fundiert & anerkannt'
     },
     {
       icon: Users,
       title: '0 bis 18 Jahre',
-      desc: 'Vom Säugling über das Schulkind bis zum Jugendlichen'
+      desc: 'Vom Säugling bis zum Teenager'
     },
     {
       icon: Home,
-      title: '10–15 Min. zu Hause',
-      desc: 'Alltagstaugliche Bodenübungen mit elterlicher Begleitung'
+      title: '10–15 Min. täglich',
+      desc: 'Leichte Übungen im Familienalltag'
     },
     {
       icon: Sparkles,
       title: '100% Ursachentherapie',
-      desc: 'Neuromotorische Reife fördern statt nur Symptome behandeln'
+      desc: 'Ursachen lösen statt Symptome deckeln'
     }
   ];
 

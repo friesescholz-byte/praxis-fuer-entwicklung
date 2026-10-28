@@ -7,32 +7,36 @@ const ease = [0.22, 1, 0.36, 1];
 
 const SLIDES = [
   {
-    image: MEDIA.kathrinWithChild7,
+    image: MEDIA.kathrinWithGirlMat,
     title: 'Individuelle Begleitung auf Augenhöhe'
   },
   {
-    image: MEDIA.babyBoyPraxis,
-    title: 'Frühkindliche Aufrichtung & Diagnostik'
+    image: MEDIA.babyFeetMat,
+    title: 'Frühkindliche Aufrichtung & Meilensteine'
   },
   {
-    image: MEDIA.childWriting6,
-    title: 'Feinmotorik & Schulvorbereitung'
+    image: MEDIA.toddlerPiklerClimb,
+    title: 'Motorische Sicherheit & Bewegungsfreude'
   },
   {
-    image: MEDIA.childWriting10,
-    title: 'Lern- & Konzentrationsstärkung'
+    image: MEDIA.childDrawingMZT,
+    title: 'Feinmotorik & Schulreife ohne Druck'
   },
   {
-    image: MEDIA.kathrinRaddatz,
-    title: 'Kathrin Raddatz • Praxisinhaberin'
+    image: MEDIA.postureCheckGirl,
+    title: 'Ganzheitliche Haltungs- & Entwicklungsdiagnostik'
+  },
+  {
+    image: MEDIA.kathrinDeskWritingGirl,
+    title: 'Konzentration & Freude am Lernen'
+  },
+  {
+    image: MEDIA.kathrinBoyTummyTime,
+    title: 'Gezielte Übungen für den Alltag'
   },
   {
     image: MEDIA.practiceEntrance,
     title: 'Praxisräume zum Wohlfühlen'
-  },
-  {
-    image: MEDIA.motivationCards,
-    title: 'Motivationskärtchen für zu Hause'
   }
 ];
 
@@ -101,9 +105,9 @@ export default function Hero() {
             transition={{ duration: 0.8, ease }}
             className="lg:col-span-7 space-y-7 text-left"
           >
-            {/* Eyebrow Badge */}
+            {/* Clean Category Marker */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E5EFFB] border border-[#C9DEF5] text-[#0B192C] text-xs font-bold tracking-wide">
-              <span className="w-2 h-2 rounded-full bg-[#25518E] animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#1A382B]" />
               <span>Ganzheitliche Entwicklungs- & Lerntherapie (0–18 Jahre)</span>
             </div>
 

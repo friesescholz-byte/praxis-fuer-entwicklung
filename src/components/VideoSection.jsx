@@ -174,6 +174,51 @@ export default function VideoSection() {
 
         </div>
 
+        {/* Practice Atmosphere Photo Strip */}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="relative rounded-3xl overflow-hidden shadow-md border-2 border-white bg-white group">
+            <img
+              src={MEDIA.kathrinDeskWritingGirl}
+              alt="Kathrin Raddatz bei der einfühlsamen Lernbegleitung am Schreibtisch"
+              className="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C]/85 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute bottom-4 left-4 right-4 text-white">
+              <p className="text-[11px] font-bold uppercase tracking-wider text-[#A2C2E8]">Lernbegleitung</p>
+              <h4 className="text-sm font-bold text-white leading-snug">Konzentration & Feinmotorik ohne Druck</h4>
+            </div>
+          </div>
+
+          <div className="relative rounded-3xl overflow-hidden shadow-md border-2 border-white bg-white group">
+            <img
+              src={MEDIA.girlCurlExercise}
+              alt="Gezielte gymnastische Bodenübungen nach PäPKi auf der Turnmatte"
+              className="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C]/85 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute bottom-4 left-4 right-4 text-white">
+              <p className="text-[11px] font-bold uppercase tracking-wider text-[#CFDDD4]">PäPKi® Bodenübungen</p>
+              <h4 className="text-sm font-bold text-white leading-snug">10–15 Minuten gezielte Reifung für zu Hause</h4>
+            </div>
+          </div>
+
+          <div className="relative rounded-3xl overflow-hidden shadow-md border-2 border-white bg-white group">
+            <img
+              src={MEDIA.childrenFeetLineup}
+              alt="Kinderfüße von Säugling bis Jugendlicher – gesunde Aufrichtung für jedes Alter"
+              className="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C]/85 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute bottom-4 left-4 right-4 text-white">
+              <p className="text-[11px] font-bold uppercase tracking-wider text-[#A2C2E8]">Altersübergreifend</p>
+              <h4 className="text-sm font-bold text-white leading-snug">Ein stabiles Fundament vom Säugling bis zum Teenager</h4>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
