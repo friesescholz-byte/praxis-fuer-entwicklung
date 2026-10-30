@@ -206,15 +206,15 @@ export default function VideoSection() {
 
           <div className="relative rounded-3xl overflow-hidden shadow-md border-2 border-white bg-white group">
             <img
-              src={MEDIA.childrenFeetLineup}
-              alt="Kinderfüße von Säugling bis Jugendlicher – gesunde Aufrichtung für jedes Alter"
+              src={MEDIA.kathrinBoyTummyTime}
+              alt="Kathrin Raddatz begleitet spielerisch bei der Entwicklungsdiagnostik auf der Turnmatte"
               className="w-full h-64 object-cover object-center group-hover:scale-105 transition-transform duration-500"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C]/85 via-transparent to-transparent pointer-events-none" />
             <div className="absolute bottom-4 left-4 right-4 text-white">
-              <p className="text-[11px] font-bold uppercase tracking-wider text-[#A2C2E8]">Altersübergreifend</p>
-              <h4 className="text-sm font-bold text-white leading-snug">Ein stabiles Fundament vom Säugling bis zum Teenager</h4>
+              <p className="text-[11px] font-bold uppercase tracking-wider text-[#A2C2E8]">Entwicklungsbegleitung</p>
+              <h4 className="text-sm font-bold text-white leading-snug">Auf Augenhöhe & mit spielerischer Freude</h4>
             </div>
           </div>
         </div>

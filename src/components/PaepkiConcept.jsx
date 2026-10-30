@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Activity, ShieldCheck, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Brain, Activity, Sparkles } from 'lucide-react';
 import { MEDIA } from '../constants/media';
 
 export default function PaepkiConcept() {

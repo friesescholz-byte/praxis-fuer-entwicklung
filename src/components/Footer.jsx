@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Heart, Phone, Mail, ArrowUp, Star } from 'lucide-react';
+import { ArrowUp, Star } from 'lucide-react';
 import InstagramIcon from './icons/InstagramIcon';
 import { MEDIA } from '../constants/media';
 

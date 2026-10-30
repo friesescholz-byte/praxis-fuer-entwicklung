@@ -1,6 +1,7 @@
 import React from 'react';
-import { Heart, Award, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Heart, CheckCircle2 } from 'lucide-react';
 import { MEDIA } from '../constants/media';
+import PaepkiHeroButton from './PaepkiHeroButton';
 
 export default function AboutSection() {
   return (
@@ -101,13 +102,10 @@ export default function AboutSection() {
             </div>
 
             <div className="pt-4">
-              <a
-                href="#kontakt"
-                className="inline-flex items-center gap-2.5 px-7 py-4 rounded-2xl bg-[#1A382B] hover:bg-[#264E3D] text-white font-bold text-sm shadow-xl shadow-[#1A382B]/20 hover:shadow-2xl transition-all duration-300 group"
-              >
-                <span>Kathrin Raddatz kennenlernen</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+              <PaepkiHeroButton
+                text="Kathrin Raddatz kennenlernen"
+                to="#kontakt"
+              />
             </div>
 
           </div>

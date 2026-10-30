@@ -1,5 +1,6 @@
 import React from 'react';
-import { MessageSquare, Search, Sparkles, RefreshCw, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { MessageSquare, Search, Sparkles, RefreshCw, CheckCircle2 } from 'lucide-react';
+import PaepkiHeroButton from './PaepkiHeroButton';
 
 export default function ProcessSteps() {
   const steps = [
@@ -115,13 +116,11 @@ export default function ProcessSteps() {
               Gerne klären wir in einem unverbindlichen Vorab-Telefonat, ob PäPKi® der passende Weg für Ihr Kind ist.
             </p>
           </div>
-          <a
-            href="#kontakt"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-[#1A382B] hover:bg-[#264E3D] text-white font-bold text-sm transition-all duration-300 shrink-0 shadow-lg shadow-[#1A382B]/20 cursor-pointer"
-          >
-            <span>Jetzt unverbindlich anfragen</span>
-            <ArrowRight className="w-4 h-4" />
-          </a>
+          <PaepkiHeroButton
+            text="Jetzt unverbindlich anfragen"
+            to="#kontakt"
+            className="shrink-0"
+          />
         </div>
 
       </div>

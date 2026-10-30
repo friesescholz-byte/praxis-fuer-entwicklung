@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, MessageCircle, Send, CheckCircle2, ShieldCheck, MapPin, Sparkles, Clock, Star, ExternalLink, Navigation } from 'lucide-react';
+import { Phone, MessageCircle, Send, CheckCircle2, ShieldCheck, MapPin, Sparkles, Clock, Star, ExternalLink, Navigation } from 'lucide-react';
 import InstagramIcon from './icons/InstagramIcon';
 import { AGE_GROUPS } from '../data/ageData';
 

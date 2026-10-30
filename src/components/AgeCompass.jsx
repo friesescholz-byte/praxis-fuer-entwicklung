@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle2, ArrowRight, Baby, Sparkles, Heart } from 'lucide-react';
+import { CheckCircle2, Baby, Sparkles, Heart } from 'lucide-react';
 import { AGE_GROUPS } from '../data/ageData';
+import PaepkiHeroButton from './PaepkiHeroButton';
 
 export default function AgeCompass({ onSelectAge }) {
   const [activeTab, setActiveTab] = useState(AGE_GROUPS[3].id); // Default to Schulkinder (6-12 J.)
@@ -143,15 +144,12 @@ export default function AgeCompass({ onSelectAge }) {
                 </div>
               </div>
 
-              {/* Action Button (Premium Forest Green Button) */}
+              {/* Action Button (Bespoke 3D Hero Button) */}
               <div className="pt-2">
-                <button
+                <PaepkiHeroButton
+                  text="Ersttermin für diesen Altersbereich anfragen"
                   onClick={() => handleSelectAgeForContact(currentGroup.id)}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-[#1A382B] hover:bg-[#264E3D] text-white font-bold text-sm shadow-xl shadow-[#1A382B]/20 hover:shadow-2xl hover:shadow-[#1A382B]/30 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 border border-white/20 group cursor-pointer"
-                >
-                  <span>Ersttermin für diesen Altersbereich anfragen</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
-                </button>
+                />
               </div>
 
             </div>
